@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <title>Cosmic</title>
+
+    <link href="css/ionic.app.min.css" rel="stylesheet">
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <!-- other libraries -->
+    <script src="lib/loDash/loDash.js"></script>
+    <script src="lib/moment/moment.js"></script>
+    <script src="lib/angular-momentjs/angular-momentjs.js"></script>
+    <script src="lib/plangular/ng-plangular.js"></script>
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="lib/ng-cordova-master/dist/ng-cordova.js"></script>
+    <script src="cordova.js"></script>
+
+    <!-- App's js -->
+    <!-- inject:js -->
+    <script src="js/app.js"></script>
+    <script src="js/id3-minimized.js"></script>
+    <script src="js/templates.js"></script>
+    <script src="js/controllers/artists.ctrl.js"></script>
+    <script src="js/controllers/manage-directories.ctrl.js"></script>
+    <script src="js/controllers/player.ctrl.js"></script>
+    <script src="js/controllers/playlist-items.ctrl.js"></script>
+    <script src="js/controllers/playlist-special.ctrl.js"></script>
+    <script src="js/controllers/playlist.ctrl.js"></script>
+    <script src="js/controllers/search.ctrl.js"></script>
+    <script src="js/controllers/settings.ctrl.js"></script>
+    <script src="js/controllers/titles.ctrl.js"></script>
+    <script src="js/directives/cosmic.directives.js"></script>
+    <script src="js/services/ID3tags.service.js"></script>
+    <script src="js/services/cosmicConfig.service.js"></script>
+    <script src="js/services/cosmicDB.service.js"></script>
+    <script src="js/services/cosmicPlayer.service.js"></script>
+    <script src="js/services/deviceFS.service.js"></script>
+    <script src="js/services/fileFactory.service.js"></script>
+    <script src="js/services/image.service.js"></script>
+    <script src="js/services/localstorage.service.js"></script>
+    <script src="js/services/onlineArtwork.service.js"></script>
+    <script src="js/services/stringProcessing.service.js"></script>
+    <!-- endinject -->
+    <!-- SoundCloud injection -->
+    <script src="http://connect.soundcloud.com/sdk.js"></script>
+    <script src="js/directives/scResultEntry/scResultEntry.js"></script>
+    <script src="js/directives/scResultList/scResultList.js"></script>
+    <script src="js/directives/scResultList/scResultListCtrl.js"></script>
+    <!-- services/directives/controllers js -->
+    <!--script src="js/controllers/controllers.js"></script-->
+
+    <!-- endinject -->
+  </head>
+
+  <body  animation="slide-left-right-ios7">
+  <div>
+    <ion-side-menus enable-menu-with-back-views="true" data-componentid="side-menu21">
+        <ion-side-menu-content>
+            <ion-nav-bar class="bar-stable">
+                <ion-nav-back-button></ion-nav-back-button>
+                <ion-nav-buttons side="left">
+                    <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+                </ion-nav-buttons>
+            </ion-nav-bar>
+
+
+<ion-nav-view></ion-nav-view>
+        </ion-side-menu-content>
+        <ion-side-menu side="left" id="side-menu21">
+            <ion-header-bar class="bar-light">
+                <div class="title">Menu</div>
+            </ion-header-bar>
+            <ion-content padding="true" class="side-menu-left has-header" style="background: url(img/yYATU0LbTf2hsueRe5ME_bart172_-iPhone-wallpaper-center-576x1024.png) no-repeat center;">
+                <div class="" data-componentid="image1" style="margin-left: -10px; width: calc(100% + 20px);">
+                    <img src="img/q6z8oFuTQGTxyKf492ug_09804b09a712b77356a4079556fbb3e0.jpg" width="100%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+                </div>
+                <a ui-sref="tab.playlists" menu-close="" id="menu-button5" style="font-size:22px;border-radius:1000px 1000px 1000px 1000px;" class=" button button-energized button-large button-block button-outline icon-left ion-play " data-componentid="button5">Music</a>
+                <a ui-sref="searchCloud" menu-close="" id="menu-button3" style="color:#F8F8F8;font-size:16px;border-radius:1000px 1000px 1000px 1000px;" class=" button button-energized button-large button-block button-outline icon-left ion-ios-cloud-outline "
+                data-componentid="button3">Search SoundCloud</a>
+                <a ui-sref="browse" menu-close="" id="menu-button4" style="font-weight:500;color:#F8F8F8;font-size:15px;border-radius:1000px 1000px 1000px 1000px;" class=" button button-energized button-large button-block button-outline icon-left ion-ios-cloud "
+                data-componentid="button4">Browse</a>
+                <a ui-sref="tab.playlists" menu-close="" id="menu-button11" style="font-weight:500;color:#F8F8F8;font-size:15px;border-radius:1000px 1000px 1000px 1000px;" class=" button button-energized button-large button-block button-outline icon-left ion-android-list "
+                data-componentid="button11">Playlists</a>
+                <div style="margin-right:-20px;" data-componentid="button6">
+                <a ui-sref="share" menu-close="" id="menu-button6" style="left:-10px;color:#F8F8F8;border-radius:50px 50px 50px 50px;" class=" button button-dark  button-full icon ion-share ">Share</a>
+                </div>
+            </ion-content>
+        </ion-side-menu>
+    </ion-side-menus>
+</div>
+  </body>
+</html>

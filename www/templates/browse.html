@@ -1,0 +1,16 @@
+<ion-view view-title="{{title}}" id="page7" class=" ">
+  <ion-content padding="true" style="background: url(img/ASFxl0LsR3i7QBPlEciB_28122e62f24d8896fe442535c1023646.jpg) no-repeat center;background-size:cover;" class="has-header">
+  	<!-- tag buttons -->
+    <div class="browse" ng-if='!showList'>
+   		<button class="tag-item button button-light" ng-repeat="tag in tags"
+					ui-sref="browse({tag: tag})">{{tag}}</button>
+		</div>
+
+		<!-- result list (tracks) -->
+		<div ng-if='showList'>
+			<sc-result-list results="results" load-more="loadMore()"></sc-result-list>
+		</div>
+
+
+  </ion-content>
+</ion-view>

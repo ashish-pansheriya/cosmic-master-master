@@ -1,0 +1,14 @@
+{
+  "name": "Cosmic",
+  "app_id": "",
+  "gulpStartupTasks": [
+    "sass",
+    "injection",
+    "generate:cache",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
+}

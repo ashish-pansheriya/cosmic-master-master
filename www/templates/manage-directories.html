@@ -1,0 +1,26 @@
+<ion-view view-title="Manage Directories">
+    <div class="bar bar-header">
+        <!--<button class="button icon ion-navicon"></button>-->
+        <h1 class="title">Music directories</h1>
+        <button class="button button-icon balanced ion-ios-plus-outline" ng-click="openModal()"></button>
+    </div>
+        <ion-content  scroll="true" class="has-header" has-bouncing="true">
+        <ion-list can-swipe="true" delegate-handle="directory-list">
+            <ion-item class="item-icon-right" ng-repeat="directory in directories track by directory.fullPath" >
+                {{directory.fullPath}}
+                <ion-spinner ng-if="directory.isLoading" class="icon ios"></ion-spinner>
+                <ion-option-button class="button-assertive"
+                    ng-click="removeDirectory(directory)">
+                    Remove
+                </ion-option-button>
+                <ion-option-button class="button-balanced"
+                    ng-click="scanDirectory(directory)">
+                    Scan
+                </ion-option-button>
+            </ion-item>
+        </ion-list>
+
+
+    </ion-content>
+</ion-view>
+

@@ -1,0 +1,49 @@
+<ion-view view-title="Playlists" class="playlists" >
+
+    <ion-content scroll="false">
+
+        <div class="special-playlists">
+            <div class="special-playlist-box box-top box-left">
+                <a href="#/tab/playlists/special/0/{{specialPlaylists[0].name}}" artwork-mosaic title="{{specialPlaylists[0].name}}" songs="specialPlaylists[0].titles"></a>
+            </div>
+            <div class="special-playlist-box box-top box-right">
+                <a href="#/tab/playlists/special/1/{{specialPlaylists[1].name}}" artwork-mosaic title="{{specialPlaylists[1].name}}" songs="specialPlaylists[1].titles"></a>
+            </div>
+            <div class="special-playlist-box box-bottom box-left">
+                <a href="#/tab/playlists/special/2/{{specialPlaylists[2].name}}" artwork-mosaic title="{{specialPlaylists[2].name}}" songs="specialPlaylists[2].titles"></a>
+            </div>
+            <div class="special-playlist-box box-bottom box-right">
+                <a href="#/tab/playlists/special/3/{{specialPlaylists[3].name}}" artwork-mosaic title="{{specialPlaylists[3].name}}" songs="specialPlaylists[3].titles"></a>
+            </div>
+        </div>
+
+        <div class="user-playlists">
+            <div class="container">
+                <button class="button button-full button-stable new-playlist-button" ng-click="newPlaylist();">New Playlist</button>
+
+                <ion-scroll class="user-playlists-scroll" has-bouncing="true">
+                    <div class="list" >
+
+                        <a ng-repeat="playlist in playlists track by playlist.id" class="item item-thumbnail-left item-button-right" ng-href="#/tab/playlists/user/{{playlist.id}}/{{playlist.name}}">
+                            <div class="item-image" >
+                                <img ng-src="{{miniaturesPath}}{{playlist.artworks[0]}}" class="miniature top-left">
+                                <img ng-src="{{miniaturesPath}}{{playlist.artworks[1]}}" class="miniature top-right">
+                                <img ng-src="{{miniaturesPath}}{{playlist.artworks[2]}}" class="miniature bottom-left">
+                                <img ng-src="{{miniaturesPath}}{{playlist.artworks[3]}}" class="miniature bottom-right">
+                            </div>
+                            <h2>{{playlist.name}}</h2>
+                            <p><b>{{playlist.nbTitles}}</b> song<span ng-if="playlist.nbTitles>1">s</span><span ng-if="playlist.like>0">, <b>{{playlist.like}}</b> <i class="icon ion-ios-heart"></i></span></p>
+
+                            <button class="button button-icon ion-more" ng-click="showPopover($event,playlist)"></button>
+                        </a>
+
+                    </div>
+                </ion-scroll>
+
+            </div>
+        </div>
+
+    </ion-content>
+
+
+</ion-view>

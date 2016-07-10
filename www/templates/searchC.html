@@ -1,0 +1,15 @@
+<ion-view title="SearchCloud" id="page8" class=" ">
+
+  <ion-content padding="true" style="background: url(img/bfyzpFejTLm2igq82nQd_tumblr_njz6tr1aBl1t1wc6qo1_500.jpg) no-repeat center;background-size:cover;" class="has-header">
+		<form ng-submit="search(this)" class="item item-input-inset">
+  		<label class="item-input-wrapper">
+		    <i class="icon ion-ios7-search placeholder-icon"></i>
+		    <input type="search" placeholder="Search" name="query" ng-model="query">
+		  </label>
+			<button class="button-small button-clear ion-close-round" 	></button>
+		</form>
+		
+
+		<sc-result-list results="results" load-more="loadMore()"></sc-result-list>
+  </ion-content>
+</ion-view>

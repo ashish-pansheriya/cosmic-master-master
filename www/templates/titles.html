@@ -1,0 +1,23 @@
+<ion-view view-title="Titles">
+<ion-content scroll="true" has-bouncing="true" >
+
+<div class="list">
+	<div collection-repeat="title in titles" item-height="title.isSeparator ? 37 : 59">
+		<div ng-if="!title.isSeparator" class="item item-song one-line" ng-click="playTitle(title)">
+
+			<img  ng-if="title.first" ng-src="{{::miniaturesPath}}{{title.artwork}}" />
+			<h2>{{title.name}}</h2>
+
+			<button class="button button-icon ion-more" ng-click="showPopover($event,title)"></button>
+
+		</div>
+
+		<div ng-if="title.isSeparator" class="item item-divider album-header">
+			{{title.name}}
+		</div>
+
+	</div>
+</div>
+
+</ion-content>
+</ion-view>
